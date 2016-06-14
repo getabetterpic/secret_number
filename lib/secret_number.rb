@@ -6,12 +6,20 @@ module SecretNumber
 
   class Application
     def initialize(argv)
-      @number = argv[0]
+      raise NoArgumentFoundError, 'You must supply an integer as an argument' if argv[0] == nil
+      raise IntegerNotFoundError, 'Sorry, the argument you pass must be an integer' unless argv[0] =~ /\d+/
+
+      @number = argv[0].to_i
     end
 
     def run
-      raise NoArgumentFoundError, 'You must supply an integer as an argument' if @number == nil
-      raise IntegerNotFoundError, 'Sorry, the argument you pass must be an integer' unless @number =~ /\d+/
+      if is_secret_additive
+        puts "The secret function for the integer #{@number} is additive"
+        exit 0
+      else
+        puts "The secret function for the integer #{@number} is not additive"
+        exit 1
+      end
     end
 
     def is_prime(test_number = @number)
