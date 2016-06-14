@@ -9,9 +9,10 @@ describe SecretNumber do
     expect { SecretNumber::Application.new([]) }.to raise_error(SecretNumber::NoArgumentFoundError)
   end
 
-  it 'fails if anything other than an integer is given' do
+  it 'fails if anything other than a positive integer is given' do
     expect { SecretNumber::Application.new(['string']) }.to raise_error(SecretNumber::IntegerNotFoundError)
-    expect { SecretNumber::Application.new([1.23]) }.to raise_error(SecretNumber::IntegerNotFoundError)
+    expect { SecretNumber::Application.new(['1.23']) }.to raise_error(SecretNumber::IntegerNotFoundError)
+    expect { SecretNumber::Application.new(['-5']) }.to raise_error(SecretNumber::IntegerNotFoundError)
   end
 
   context '#is_prime' do
