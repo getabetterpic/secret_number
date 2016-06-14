@@ -2,7 +2,7 @@
 
 ## Usage
 
-1. `git clone git@github.com:getabetterpic/secret_number.git`
+1. `git clone https://github.com/getabetterpic/secret_number.git`
 1. `cd secret_number`
 1. `bundle exec rake install`
 1. `bundle exec secret #` where # is a positive integer
