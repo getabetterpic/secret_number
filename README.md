@@ -1,28 +1,11 @@
 # SecretNumber
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/secret_number`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'secret_number'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install secret_number
-
 ## Usage
 
-TODO: Write usage instructions here
+1. `git clone git@github.com:getabetterpic/secret_number.git`
+1. `cd secret_number`
+1. `bundle exec rake install`
+1. `bundle exec secret #` where # is a positive integer
 
 ## Development
 
@@ -38,4 +21,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
