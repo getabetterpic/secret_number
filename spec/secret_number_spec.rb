@@ -16,17 +16,28 @@ describe SecretNumber do
 
   context '#is_prime' do
     it 'returns true if given number is prime' do
-      expect(SecretNumber::Application.new([5]).is_prime(5)).to eq(true)
+      expect(SecretNumber::Application.new([5]).is_prime).to eq(true)
     end
 
     it 'returns false if given number is not prime' do
-      expect(SecretNumber::Application.new([6]).is_prime(6)).to eq(false)
+      expect(SecretNumber::Application.new([6]).is_prime).to eq(false)
+    end
+
+    it 'returns false if given number is 0' do
+      expect(SecretNumber::Application.new([0]).is_prime).to eq(false)
+    end
+
+    it 'returns false if given number is 1' do
+      expect(SecretNumber::Application.new([1]).is_prime).to eq(false)
     end
   end
 
   context '#is_secret_additive' do
-    it 'returns false if combination of all prime numbers less than given number are not additive' do
-      expect(SecretNumber::Application.new([7]).is_secret_additive).to eq(false)
+    it 'returns true if combination of all prime numbers less than given number are additive' do
+      app = SecretNumber::Application.new([7])
+      expect(app.is_secret_additive).to eq(true)
     end
+
+
   end
 end
