@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/getabetterpic/secret_number.svg?branch=master)](https://travis-ci.org/getabetterpic/secret_number)
 
+Given the function `#secret` that accepts a single integer parameter and returns an integer, this program takes one command-line argument (a number) and determines if the `#secret` function is additive [secret(x+y) = secret(x) + secret(y)], for all combinations x and y, where x and y are all prime numbers less than the number passed via the command-line argument.
+
 ## Usage
 
 1. `gem install secret_number`
