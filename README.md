@@ -1,5 +1,7 @@
 # SecretNumber
 
+[![Build Status](https://travis-ci.org/getabetterpic/secret_number.svg?branch=master)](https://travis-ci.org/getabetterpic/secret_number)
+
 ## Usage
 
 1. `gem install secret_number`
