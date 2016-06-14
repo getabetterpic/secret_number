@@ -23,4 +23,10 @@ describe SecretNumber do
       expect(SecretNumber::Application.new([6]).is_prime(6)).to eq(false)
     end
   end
+
+  context '#is_secret_additive' do
+    it 'returns false if combination of all prime numbers less than given number are not additive' do
+      expect(SecretNumber::Application.new([7]).is_secret_additive).to eq(false)
+    end
+  end
 end
